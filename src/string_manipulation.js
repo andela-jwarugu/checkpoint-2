@@ -6,31 +6,15 @@
 	};
 
 	String.prototype.toUpper = function() {
-		var capitalized = '';
-		for (var i = 0; i < this.length; i++) {
-			if (this.charCodeAt(i) >= 97 && this.charCodeAt(i) <= 122) {
-				var asciiCode = this.charCodeAt(i) - 32;
-				capitalized += String.fromCharCode(asciiCode);
-			} else {
-				capitalized += this[i];
-			}
-
-		}
-		return capitalized;
+		return this.replace(/[a-z]/g, (character) => {
+			return String.fromCharCode(character.charCodeAt() - 32);
+		});
 	};
 
 	String.prototype.toLower = function() {
-		var lowercased = '';
-		for (var i = 0; i < this.length; i++) {
-			if (this.charCodeAt(i) >= 65 && this.charCodeAt(i) <= 90) {
-				var asciiCode = this.charCodeAt(i) + 32;
-				lowercased += String.fromCharCode(asciiCode);
-			} else {
-				lowercased += this[i];
-			}
-
-		}
-		return lowercased;
+		return this.replace(/[A-Z]/g, (character) => {
+			return String.fromCharCode(character.charCodeAt() + 32);
+		});
 	};
 
 	String.prototype.ucFirst = function() {
@@ -44,7 +28,7 @@
 	String.prototype.words = function() {
 		return this.split(/\W+/);
 	};
-	
+
 	String.prototype.wordCount = function() {
 		var stringArray = this.words();
 		return stringArray.length;
