@@ -30,8 +30,7 @@
 	};
 
 	String.prototype.wordCount = function() {
-		var stringArray = this.words();
-		return stringArray.length;
+		return this.words().length;
 	};
 
 	String.prototype.toCurrency = function() {

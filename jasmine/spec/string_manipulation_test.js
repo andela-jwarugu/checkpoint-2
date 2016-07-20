@@ -14,6 +14,7 @@ describe('toUpper', function(){
     expect('lol'.toUpper()).toBe('LOL');
     expect('YEAY'.toUpper()).toBe('YEAY');
     expect('nOP'.toUpper()).toBe('NOP');
+    expect('123roy'.toUpper()).toBe('123ROY');
   });
 })
 
@@ -68,6 +69,7 @@ describe('toCurrency', function(){
     expect('1000'.toCurrency()).toBe('1,000.00');
     expect('1000.50'.toCurrency()).toBe('1,000.50');
     expect('1000000'.toCurrency()).toBe('1,000,000.00');
+    expect('123'.toCurrency()).toBe('123.00');
   });
 })
 
@@ -77,5 +79,6 @@ describe('fromCurrency', function(){
     expect('1,000'.fromCurrency()).toEqual(1000);
     expect('1,000,000'.fromCurrency()).toEqual(1000000);
     expect('1,000.50'.fromCurrency()).toBe(1000.50);
+    expect('123.00'.fromCurrency()).toBe(123);
   });
 })
