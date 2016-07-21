@@ -5,7 +5,7 @@ describe('hasVowels', function(){
     expect('AEIsf'.hasVowels()).toBe(true);
     expect('crypt'.hasVowels()).toBe(false);
   });
-})
+});
 
 describe('toUpper', function(){
   it('returns type String', function(){
@@ -16,7 +16,7 @@ describe('toUpper', function(){
     expect('nOP'.toUpper()).toBe('NOP');
     expect('123roy'.toUpper()).toBe('123ROY');
   });
-})
+});
 
 describe('toLower', function(){
   it('returns type String', function(){
@@ -25,7 +25,7 @@ describe('toLower', function(){
     expect('LOL'.toLower()).toBe('lol');
     expect('yeay'.toLower()).toBe('yeay');
   });
-})
+});
 
 describe('ucFirst', function(){
   it('returns type String', function(){
@@ -34,7 +34,7 @@ describe('ucFirst', function(){
     expect('hallo there lady'.ucFirst()).toBe('Hallo there lady');
     expect('Hey'.ucFirst()).toBe('Hey');
   });
-})
+});
 
 describe('isQuestion', function(){
   it('returns type Boolean', function(){
@@ -44,7 +44,7 @@ describe('isQuestion', function(){
     expect('H?allo'.isQuestion()).toBe(false);
     expect('cakes'.isQuestion()).toBe(false);
   });
-})
+});
 
 describe('words', function(){
   it('returns type Object and instance of Array', function(){
@@ -53,7 +53,7 @@ describe('words', function(){
     expect('list of something'.words()).toEqual(['list', 'of', 'something']);
     expect('be,separated;at'.words()).toEqual(['be', 'separated', 'at']);
   });
-})
+});
 
 describe('wordCount', function(){
   it('returns type Number', function(){
@@ -61,7 +61,7 @@ describe('wordCount', function(){
     expect('list of something'.wordCount()).toEqual(3);
     expect('me'.wordCount()).toEqual(1);
   });
-})
+});
 
 describe('toCurrency', function(){
   it('returns type String', function(){
@@ -71,7 +71,7 @@ describe('toCurrency', function(){
     expect('1000000'.toCurrency()).toBe('1,000,000.00');
     expect('123'.toCurrency()).toBe('123.00');
   });
-})
+});
 
 describe('fromCurrency', function(){
   it('returns type Number', function(){
@@ -81,4 +81,4 @@ describe('fromCurrency', function(){
     expect('1,000.50'.fromCurrency()).toBe(1000.50);
     expect('123.00'.fromCurrency()).toBe(123);
   });
-})
+});

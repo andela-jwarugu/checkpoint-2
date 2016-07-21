@@ -6,7 +6,6 @@
     "node": "6.2.1",
     "npm": "3.9.3"
   },
-
   "main": "index.js",
   "scripts": {
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine/spec/support/jasmine.json"
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/andela-jwarugu/checkpoint-2#readme",
   "devDependencies": {
+    "eslint": "^3.1.1",
     "jasmine": "^2.4.1"
   }
 }
