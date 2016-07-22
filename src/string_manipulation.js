@@ -35,8 +35,8 @@
 
 	String.prototype.toCurrency = function() {
 		var currencyObj = parseFloat(this).toFixed(2);
-		var re = new RegExp('(\\d)(?=(\\d{3})+\\.)', 'g');
-		return (currencyObj.replace(re, '$1,'));
+		var expression = new RegExp('(\\d)(?=(\\d{3})+\\.)', 'g');
+		return (currencyObj.replace(expression, '$1,'));
 	};
 
 	String.prototype.fromCurrency = function() {
