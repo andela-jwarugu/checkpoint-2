@@ -1,0 +1,11 @@
+{
+  "spec_dir": "jasmine",
+  "spec_files": [
+    "**/string_manipulation_test.js"
+  ],
+  "helpers": [
+    "spec/support/terminal.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}

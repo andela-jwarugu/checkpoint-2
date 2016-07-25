@@ -1,0 +1,7 @@
+dependencies:
+  pre:
+    - npm install -g  jasmine
+test:
+  override:
+    - nvm install stable && nvm alias default stable
+    - npm test
